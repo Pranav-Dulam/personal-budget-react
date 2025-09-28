@@ -399,7 +399,7 @@ nav ul li a:hover  {
 div.hero {
   height: 350px;
   background-color: #b4c6f0;
-  background-image: url('/public/bg.png');
+  background-image: url('./assets/bg.png');
   background-size: 400px;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -465,4 +465,35 @@ main article {
   main article {
       margin: 10px;
   }
+}
+
+
+/* Side-by-side layout for charts */
+.charts-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap; /* wrap on smaller screens */
+  margin: 20px 0;
+}
+
+.charts-row article {
+  flex: 1 1 360px;
+  max-width: 420px;
+  text-align: center;
+}
+
+.charts-row canvas {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.charts-row .label {
+  font-size: 12px;
+  fill: #222;
+  pointer-events: none;
 }
